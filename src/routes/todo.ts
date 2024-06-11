@@ -1,41 +1,113 @@
-import express, { Request, Response } from "express";
-import Todo, { ITodo } from "../model/Todo.js";
-import { createTodo } from "../controller/todoController.js";
+import express, { NextFunction, Request, Response } from "express";
+import mongoose from "mongoose";
+import { ITodo } from "../model/Todo.js";
+import Controller from "../controller/index.js";
+import { HttpStatusCode } from "../lib/index.js";
 
 const router = express.Router();
 
-router.get("/all", async (req: Request, res: Response) => {
+/**
+ * @route GET /all
+ * @description Fetch all todos
+ * @access Public
+ */
+router.get("/all", async (req: Request, res: Response, next: NextFunction) => {
   try {
-    // Fetch all todos
-    const todos: ITodo[] = await Todo.find();
-
-    res.status(200).json(todos);
+    const todos: ITodo[] = await Controller.Todo.all();
+    res.status(HttpStatusCode.OK).json(todos);
   } catch (error) {
-    console.error("Error fetching todos:", error);
-    res.status(500).json({ message: "Internal server error" });
+    next(error);
   }
 });
 
-router.post("/create", async (req: Request, res: Response) => {
-  try {
-    const { title, description, folderId } = req.body;
+/**
+ * @route POST /create
+ * @description Create a new todo
+ * @access Public
+ */
+router.post(
+  "/create",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { title, description, folderId } = req.body;
 
-    // Validate request body
-    if (!title || !description || !folderId) {
+      // Validate request body
+      if (!title || !description || !folderId) {
+        return res
+          .status(HttpStatusCode.BAD_REQUEST)
+          .json({ message: "Title, description, and folderId are required" });
+      }
+
+      // Call createTodo function to create a new todo
+      const todo: ITodo = await Controller.Todo.create(
+        title,
+        description,
+        folderId
+      );
+      res
+        .status(HttpStatusCode.CREATED)
+        .json({ message: "Todo created successfully", todo });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+/**
+ * @route DELETE /del/:todoID
+ * @description Delete a todo
+ * @access Public
+ */
+router.delete(
+  "/del/:todoID",
+  async (req: Request, res: Response, next: NextFunction) => {
+    const { todoID } = req.params;
+
+    // Validate the provided ID
+    if (!mongoose.Types.ObjectId.isValid(todoID)) {
       return res
-        .status(400)
-        .json({ message: "Title, description, and folderId are required" });
+        .status(HttpStatusCode.BAD_REQUEST)
+        .json({ error: true, message: "Invalid todo ID" });
     }
 
-    // Call createTodo function to create a new todo
-    const todo = await createTodo(title, description, folderId);
-
-    // Return the created todo in the response
-    res.status(201).json({ message: "Todo created successfully", todo });
-  } catch (error) {
-    console.error("Error creating todo:", error);
-    res.status(500).json({ message: "Internal server error" });
+    try {
+      // Attempt to delete the todo
+      await Controller.Todo.delete(new mongoose.Types.ObjectId(todoID));
+      res
+        .status(HttpStatusCode.OK)
+        .json({ success: true, message: "Todo deleted successfully" });
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
+router.put(
+  "/update/:todoID",
+  async (req: Request, res: Response, next: NextFunction) => {
+    const { todoID } = req.params;
+    const updateData = req.body;
+
+    if (!mongoose.Types.ObjectId.isValid(todoID)) {
+      return res.status(HttpStatusCode.BAD_REQUEST).json({
+        error: true,
+        message: "Invalid todo ID",
+      });
+    }
+
+    try {
+      const updatedTodo = await Controller.Todo.update(
+        new mongoose.Types.ObjectId(todoID),
+        updateData
+      );
+      res.status(HttpStatusCode.OK).json({
+        success: true,
+        message: "Todo updated successfully",
+        data: updatedTodo,
+      });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
 export default router;

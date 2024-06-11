@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import Folder, { IFolder } from "../model/Folder.js";
+import Todo from "../model/Todo.js";
 
 /**
  * Function to create a new folder
@@ -7,7 +8,7 @@ import Folder, { IFolder } from "../model/Folder.js";
  * @param {mongoose.Types.ObjectId} userId - The ID of the user who owns the folder
  * @returns {Promise<IFolder>} The created folder
  */
-export async function createFolder(
+async function createFolder(
   name: string,
   userId: mongoose.Types.ObjectId
 ): Promise<IFolder> {
@@ -29,3 +30,51 @@ export async function createFolder(
     throw error;
   }
 }
+
+/**
+ * Deletes a folder from the database
+ * @param {mongoose.Types.ObjectId} folderID - The ID of the user who owns the folder
+ * @returns {Promise<void>}
+ */
+const deleteFolder = async (
+  folderID: mongoose.Types.ObjectId
+): Promise<void> => {
+  try {
+    // Validate the provided folder ID
+    if (!mongoose.Types.ObjectId.isValid(folderID)) {
+      throw new Error("Invalid folder ID");
+    }
+
+    // Find the folder by ID
+    const folder: IFolder | null = await Folder.findById(folderID);
+    if (!folder) {
+      throw new Error("Folder not found");
+    }
+
+    // Delete all associated todos
+    await Todo.deleteMany({ folderId: folderID });
+
+    // Delete the folder itself
+    await Folder.findByIdAndDelete(folderID);
+
+    console.log("Folder and associated todos deleted successfully");
+  } catch (error) {
+    console.error("Error deleting folder:", error.message || error);
+    throw error;
+  }
+};
+
+const allFolders = async (): Promise<IFolder[]> => {
+  try {
+    const folders = await Folder.find();
+    return folders;
+  } catch (error) {
+    throw Error;
+  }
+};
+const FolderController = {
+  create: createFolder,
+  all: allFolders,
+  delete: deleteFolder,
+};
+export default FolderController;

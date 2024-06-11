@@ -7,7 +7,7 @@ import User, { IUser } from "../model/User.js"; // Assuming User model is import
  * @param {string} password - The password of the user
  * @returns {Promise<IUser>} The created user
  */
-export async function createUser(
+async function createUser(
   username: string,
   email: string,
   name: string,
@@ -32,3 +32,5 @@ export async function createUser(
     throw error;
   }
 }
+const UserController = { create: createUser };
+export default UserController;

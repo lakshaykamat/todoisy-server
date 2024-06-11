@@ -1,4 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
+import Folder, { IFolder } from "./Folder.js"; // Assuming Folder model is imported
 
 export interface ITodo extends Document {
   title: string;
@@ -62,6 +63,21 @@ TodoSchema.virtual("briefDescription").get(function () {
 
 // Ensure indexing on folderId for efficient querying
 TodoSchema.index({ folderId: 1 });
+
+// Pre remove hook to remove todo reference from the folder
+// TodoSchema.pre("remove", async function (next) {
+//   const todo = this as ITodo;
+//   try {
+//     const folder = await Folder.findById(todo.folderId);
+//     if (folder) {
+//       folder.todos = folder.todos.filter((todoId) => !todoId.equals(todo._id));
+//       await folder.save();
+//     }
+//     next();
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 // Export the model
 export default mongoose.model<ITodo>("Todo", TodoSchema);

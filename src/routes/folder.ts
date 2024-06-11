@@ -1,39 +1,64 @@
-import express, { Request, Response } from "express";
-import { createFolder } from "../controller/folderController.js";
+import express, { NextFunction, Request, Response } from "express";
 import Folder, { IFolder } from "../model/Folder.js";
+import Controller from "../controller/index.js";
+import mongoose from "mongoose";
+import { HttpStatusCode } from "../lib/index.js";
 
 const router = express.Router();
 
-router.get("/all", async (req: Request, res: Response) => {
+router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     // Fetch all todos
-    const todos: IFolder[] = await Folder.find();
+    const foldres = await Controller.Folder.all();
 
-    res.status(200).json(todos);
+    res.status(HttpStatusCode.OK).json(foldres);
   } catch (error) {
-    console.error("Error fetching folders:", error);
-    res.status(500).json({ message: "Internal server error" });
+    next(error);
   }
 });
 
-router.post("/create", async (req: Request, res: Response) => {
-  try {
-    const { title, userId } = req.body;
+router.post(
+  "/create",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { title, userId } = req.body;
 
-    // Validate request body
-    if (!title || !userId) {
-      return res
-        .status(400)
-        .json({ message: "Title and User ID are required" });
+      // Validate request body
+      if (!title || !userId) {
+        return res
+          .status(400)
+          .json({ message: "Title and User ID are required" });
+      }
+
+      const todo = await Controller.Folder.create(title, userId);
+
+      res.status(201).json({ message: "Folder created successfully", todo });
+    } catch (error) {
+      next(error);
     }
-
-    const todo = await createFolder(title, userId);
-
-    res.status(201).json({ message: "Folder created successfully", todo });
-  } catch (error) {
-    console.error("Error creating folder:", error);
-    res.status(500).json({ message: "Internal server error" });
   }
-});
+);
 
+router.delete(
+  "/del/:folderID",
+  async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const { folderID } = req.params;
+      // Validate the provided folder ID
+      if (!mongoose.Types.ObjectId.isValid(folderID)) {
+        return res
+          .status(400)
+          .json({ error: true, message: "Invalid Folder iD" });
+      }
+
+      // Attempt to delete the todo
+      await Controller.Folder.delete(new mongoose.Types.ObjectId(folderID));
+      res
+        .status(200)
+        .json({ success: true, message: "Folder deleted successfully" });
+    } catch (error) {
+      next(error);
+    }
+  }
+);
 export default router;
