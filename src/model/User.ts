@@ -9,6 +9,7 @@ export interface IUser extends Document {
   folders: mongoose.Schema.Types.ObjectId[];
   userXp: number;
   level: number;
+  comparePassword: (candidatePassword: string) => Promise<boolean>;
 }
 // Define the schema
 const UserSchema = new mongoose.Schema(

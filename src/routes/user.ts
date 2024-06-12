@@ -1,12 +1,14 @@
 import express, { NextFunction, Request, Response } from "express";
-import User from "../model/User.js";
+import { body, validationResult } from "express-validator";
+import jwt from "jsonwebtoken";
+import User, { IUser } from "../model/User.js";
 import Controller from "../controller/index.js";
 import { HttpStatusCode } from "../lib/index.js";
 
 const router = express.Router();
 
 // Route to get all users
-router.get("/all", async (req: Request, res: Response, next: NextFunction) => {
+router.get("/", async (req: Request, res: Response, next: NextFunction) => {
   try {
     // Fetch all users from the database
     const users = await User.find();
@@ -17,34 +19,82 @@ router.get("/all", async (req: Request, res: Response, next: NextFunction) => {
   }
 });
 
-// Route to create a new user
 router.post(
-  "/create",
-  async (req: Request, res: Response, next: NextFunction) => {
-    try {
-      const { username, email, password, name } = req.body;
+  "/register",
+  [
+    body("username")
+      .isLength({ min: 3 })
+      .withMessage("Username must be at least 3 characters long"),
+    body("email").isEmail().withMessage("Email is not valid"),
+    body("name").isLength({ min: 3 }).withMessage("Name is not valid"),
+    body("password")
+      .isLength({ min: 6 })
+      .withMessage("Password must be at least 6 characters long"),
+  ],
+  async (req: Request, res: Response) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
-      // Validate request body
-      if (!username || !email || !password || !name) {
-        return res
-          .status(HttpStatusCode.BAD_REQUEST)
-          .json({ message: "Username, email, and password are required" });
+    const { username, name, email, password } = req.body;
+
+    try {
+      let user = await User.findOne({ email });
+      if (user) {
+        return res.status(400).json({ error: "User already exists" });
       }
 
-      // Call createUser function to create a new user
-      const user = await Controller.User.create(
-        username,
-        email,
-        name,
-        password
-      );
+      user = new User({ username, name, email, password });
+      await user.save();
 
-      // Return the created user in the response
-      res
-        .status(HttpStatusCode.CREATED)
-        .json({ message: "User created successfully", user });
-    } catch (error) {
-      next(error);
+      const payload = { userId: user.id };
+      const token = jwt.sign(payload, process.env.JWT_SECRET!, {
+        expiresIn: "1h",
+      });
+
+      res.status(HttpStatusCode.CREATED).json({ token });
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server error");
+    }
+  }
+);
+
+router.post(
+  "/login",
+  [
+    body("email").isEmail().withMessage("Email is not valid"),
+    body("password").exists().withMessage("Password is required"),
+  ],
+  async (req: Request, res: Response) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { email, password } = req.body;
+
+    try {
+      const user = await User.findOne({ email });
+      if (!user) {
+        return res.status(400).json({ error: "Invalid credentials" });
+      }
+
+      const isMatch = await user.comparePassword(password);
+      if (!isMatch) {
+        return res.status(400).json({ error: "Invalid credentials" });
+      }
+
+      const payload = { userId: user.id };
+      const token = jwt.sign(payload, process.env.JWT_SECRET!, {
+        expiresIn: "1h",
+      });
+
+      res.json({ token });
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server error");
     }
   }
 );

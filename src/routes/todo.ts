@@ -1,8 +1,10 @@
 import express, { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
-import { ITodo } from "../model/Todo.js";
+import Todo, { ITodo } from "../model/Todo.js";
 import Controller from "../controller/index.js";
 import { HttpStatusCode } from "../lib/index.js";
+import { AuthenticatedRequest } from "../controller/userController.js";
+import Folder from "../model/Folder.js";
 
 const router = express.Router();
 
@@ -11,14 +13,21 @@ const router = express.Router();
  * @description Fetch all todos
  * @access Public
  */
-router.get("/all", async (req: Request, res: Response, next: NextFunction) => {
-  try {
-    const todos: ITodo[] = await Controller.Todo.all();
-    res.status(HttpStatusCode.OK).json(todos);
-  } catch (error) {
-    next(error);
+router.get(
+  "/",
+  async (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
+    try {
+      console.log(req.user);
+      //@ts-ignore
+      const folder = await Folder.findByUserId(req.user.userId);
+      console.log(folder[0].todos);
+      const todos: ITodo[] = await Todo.findById(folder[0].todos);
+      res.status(HttpStatusCode.OK).json(todos);
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
 /**
  * @route POST /create
