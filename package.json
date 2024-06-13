@@ -1,10 +1,14 @@
 {
-  "name": "template",
+  "name": "todoisy-server",
   "version": "1.0.0",
   "main": "src/index.ts",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "build": "tsc && cp -r src/views/ dist/",
+    "vercel-build": "echo Hello",
     "start": "npm run build && node dist/index.js",
     "dev": "nodemon ts-node --respawn src/index.ts",
     "test": "jest"
