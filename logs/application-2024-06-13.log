@@ -1,0 +1,277 @@
+2024-06-13T03:28:23.925Z info: Token issued to lakshaykamat
+2024-06-13T03:29:15.292Z info: Token issued to lakshaykamat
+2024-06-13T03:36:00.720Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:36:01.048Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:41:32.758Z error: Error: Invalid password and username.
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:55:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:56.540Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:56.754Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:58.070Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:58.200Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:58.972Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:59.114Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:59.730Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:56:59.863Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:00.276Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:00.406Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:00.705Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:00.832Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:01.244Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:01.376Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:01.838Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:01.967Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:16.369Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:57:16.495Z error: Error: Username and password required
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:49:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:58:46.991Z error: Error: Invalid password and username.
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:56:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:59:10.516Z error: Error: Invalid password and username.
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:56:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T03:59:12.369Z error: Error: Invalid password and username.
+    at isSudoUser (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:56:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)
+2024-06-13T04:02:48.892Z error: Error: Access denied. No token provided.
+    at authenticateJWT (file:///C:/Users/laksh/Documents/Projects/Web/todoisy-server/dist/controller/userController.js:36:15)
+    at Layer.handle [as handle_request] (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:646:15
+    at next (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:265:14)
+    at Function.handle (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\laksh\Documents\Projects\Web\todoisy-server\node_modules\express\lib\router\index.js:47:12)

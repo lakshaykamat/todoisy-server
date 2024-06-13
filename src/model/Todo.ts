@@ -6,6 +6,10 @@ export interface ITodo extends Document {
   description: string;
   status: "pending" | "completed";
   folderId: mongoose.Schema.Types.ObjectId;
+  userId: mongoose.Schema.Types.ObjectId;
+  priority: 1 | 2 | 3 | 4;
+  labels: string[];
+  dueDate: Date;
 }
 
 // Define the schema
@@ -30,10 +34,28 @@ const TodoSchema = new mongoose.Schema(
       enum: ["pending", "completed"],
       default: "pending",
     },
+    priority: {
+      type: Number,
+      enum: [1, 2, 3, 4],
+      default: 4,
+    },
     folderId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Folder",
       required: true,
+    },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    labels: {
+      type: [String],
+      default: [],
+    },
+    dueDate: {
+      type: Date,
+      required: false,
     },
   },
   {
@@ -63,21 +85,4 @@ TodoSchema.virtual("briefDescription").get(function () {
 
 // Ensure indexing on folderId for efficient querying
 TodoSchema.index({ folderId: 1 });
-
-// Pre remove hook to remove todo reference from the folder
-// TodoSchema.pre("remove", async function (next) {
-//   const todo = this as ITodo;
-//   try {
-//     const folder = await Folder.findById(todo.folderId);
-//     if (folder) {
-//       folder.todos = folder.todos.filter((todoId) => !todoId.equals(todo._id));
-//       await folder.save();
-//     }
-//     next();
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-
-// Export the model
 export default mongoose.model<ITodo>("Todo", TodoSchema);

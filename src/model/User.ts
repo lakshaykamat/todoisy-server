@@ -11,6 +11,7 @@ export interface IUser extends Document {
   level: number;
   comparePassword: (candidatePassword: string) => Promise<boolean>;
 }
+
 // Define the schema
 const UserSchema = new mongoose.Schema(
   {
@@ -63,8 +64,12 @@ const UserSchema = new mongoose.Schema(
   }
 );
 
-// Pre-save middleware to hash the password before saving the user
+// Pre-save middleware to hash the password and lowercase the username before saving the user
 UserSchema.pre("save", async function (next) {
+  if (this.isModified("username") || this.isNew) {
+    this.username = this.username.toLowerCase();
+  }
+
   if (this.isModified("password") || this.isNew) {
     try {
       const salt = await bcrypt.genSalt(10);
@@ -84,8 +89,9 @@ UserSchema.methods.comparePassword = function (candidatePassword: string) {
 };
 
 // Static method to find a user by email
-UserSchema.statics.findByEmail = function (email) {
+UserSchema.statics.findByEmail = function (email: string) {
   return this.findOne({ email });
 };
+
 // Export the model
 export default mongoose.model<IUser>("User", UserSchema);

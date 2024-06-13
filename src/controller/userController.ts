@@ -1,8 +1,29 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
+import { body, validationResult } from "express-validator";
 import User, { IUser } from "../model/User.js"; // Assuming User model is imported
 import { HttpStatusCode } from "../lib/index.js";
 
+export interface AuthenticatedRequest extends Request {
+  user?: any;
+}
+
+const validation = {
+  Register: [
+    body("username")
+      .isLength({ min: 3 })
+      .withMessage("Username must be at least 3 characters long"),
+    body("email").isEmail().withMessage("Email is not valid"),
+    body("name").isLength({ min: 3 }).withMessage("Name is not valid"),
+    body("password")
+      .isLength({ min: 6 })
+      .withMessage("Password must be at least 6 characters long"),
+  ],
+  Login: [
+    body("email").isEmail().withMessage("Email is not valid"),
+    body("password").exists().withMessage("Password is required"),
+  ],
+};
 /**
  * Function to create a new user
  * @param {string} username - The username of the user
@@ -35,9 +56,7 @@ async function createUser(
     throw error;
   }
 }
-export interface AuthenticatedRequest extends Request {
-  user?: any;
-}
+
 const authenticateJWT = (
   req: AuthenticatedRequest,
   res: Response,
@@ -62,23 +81,23 @@ const authenticateJWT = (
 const isSudoUser = (req: Request, res: Response, next: NextFunction) => {
   const { username, password } = req.body;
   if (!username || !password) {
-    return res
-      .status(HttpStatusCode.BAD_REQUEST)
-      .json({ error: true, message: "Username and Password is required" });
+    throw Error("Username and password required");
   }
-  try {
-    if (password == "lakshay2004" && username == "lakshay") {
-      next();
-    }
-  } catch (error) {
-    res
-      .status(HttpStatusCode.BAD_REQUEST)
-      .json({ error: "Invalid password and username." });
+
+  if (
+    password == process.env.ADMIN_PASSWORD &&
+    username == process.env.ADMIN_USERNAME
+  ) {
+    next();
+  } else {
+    throw Error("Invalid password and username.");
   }
 };
+
 const UserController = {
   create: createUser,
   auth: authenticateJWT,
+  validation,
   isSudoUser,
 };
 export default UserController;
